@@ -15,20 +15,8 @@
 \urlstyle{tt}
 % use fontawesome
 \RequirePackage{fontawesome}
-% use xcolor for customizing color
-%\RequirePackage[usenames,dvipsnames]{xcolor}
-% loading fonts
-\RequirePackage{fontspec}
-% Main document font
-% \setmainfont[
-%   Path = fonts/Main/ ,
-%   Extension = .otf ,
-%   UprightFont = *-regular ,
-%   BoldFont = *-bold ,
-%   ItalicFont = *-italic ,
-%   BoldItalicFont = *-bolditalic ,
-%   SmallCapsFont = Fontin-SmallCaps
-% ]{texgyretermes}
+% use roboto as font
+\usepackage[sfdefault]{roboto}
 
 \RequirePackage[
 	a4paper,
@@ -48,7 +36,7 @@
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\raggedright} % Make the \section headers large (\Large),
+  {\Large\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
@@ -72,7 +60,7 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge\scshape{#1}}
+  \centerline{\Huge{#1}}
   \vspace{1.25ex}
 }
 
