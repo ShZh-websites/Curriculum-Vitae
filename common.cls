@@ -16,6 +16,7 @@
 % use fontawesome
 \RequirePackage{fontawesome}
 % use XChater as font
+\RequirePackage{roboto}
 \usepackage{XCharter}
 
 \RequirePackage[
@@ -60,13 +61,13 @@
 }
 
 \newcommand{\name}[1]{
-  \centerline{\Huge{#1}}
+  {\sffamily\centerline{\Huge{#1}}}
   \vspace{1.25ex}
 }
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{\href{mailto:#1}{\faEnvelope\ #1}}
+\newcommand{\email}[1]{\href{mailto:#1}{\faEnvelope\ \mdseries #1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
 \newcommand{\linkedin}[2][]{ 
