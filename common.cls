@@ -15,8 +15,8 @@
 \urlstyle{tt}
 % use fontawesome
 \RequirePackage{fontawesome}
-% use roboto as font
-\usepackage[sfdefault]{roboto}
+% use XChater as font
+\usepackage{XCharter}
 
 \RequirePackage[
 	a4paper,
@@ -62,12 +62,6 @@
 \newcommand{\name}[1]{
   \centerline{\Huge{#1}}
   \vspace{1.25ex}
-}
-
-% defines one's name
-% usage: \name{<name>}
-\newcommand{\nameTest}[1]{
-  {\large\scshape{#1}}
 }
 
 % defines one's email
