@@ -16,7 +16,7 @@
 % use fontawesome
 \RequirePackage{fontawesome}
 % use XChater as font
-\RequirePackage{roboto}
+\RequirePackage[sfdefault]{roboto}
 \usepackage{XCharter}
 
 \RequirePackage[
@@ -34,10 +34,9 @@
 %\setlist{nosep} % removes all vertical spacing within and around the list
 \setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
 \setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
-\RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
-  {\Large\raggedright} % Make the \section headers large (\Large),
+  {\sffamily\Large\scshape\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
@@ -62,12 +61,12 @@
 
 \newcommand{\name}[1]{
   {\sffamily\centerline{\Huge{#1}}}
-  \vspace{1.25ex}
+  \vspace{2ex}
 }
 
 % defines one's email
 % usage: \email{<email>}
-\newcommand{\email}[1]{\href{mailto:#1}{\faEnvelope\ \mdseries #1}}
+\newcommand{\email}[1]{\href{mailto:#1}{\faEnvelope\ #1}}
 % defines one's linkedin
 % usage: \linkedin{<linkedin>}
 \newcommand{\linkedin}[2][]{ 
