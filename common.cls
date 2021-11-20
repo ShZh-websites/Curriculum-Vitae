@@ -6,7 +6,7 @@
 \RequirePackage{xifthen}        % Use xifthen
 \RequirePackage{hyperref}       % Use hyperlink for email and url
 \RequirePackage{fontawesome}    % Use fontawesome
-\RequirePackage[sfdefault]{roboto} % Roboto as sans font
+\RequirePackage{roboto}         % Roboto as sans font
 \RequirePackage{XCharter}       % XCharter as serif-sans font
 \RequirePackage{titlesec}       % Set title style
 \RequirePackage{enumitem}       % Set list items
@@ -20,6 +20,7 @@
 ]{geometry}
 
 % General styles
+\pagenumbering{gobble}          % suppress displaying page number
 \setlength{\parindent}{0pt}     % disable indent globally
 \hypersetup{hidelinks}
 % List styles
