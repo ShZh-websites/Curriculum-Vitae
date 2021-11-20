@@ -55,6 +55,9 @@
 \newcommand{\datedsubsection}[2]{%
   \subsection[#1]{#1 \hfill #2}%
 }
+\newcommand{\projectsubsection}[4]{%
+  \subsection[#1]{{\href{#2}{\faGithub\ #1}} \hspace{0.1em} \faStarO\ #3 \hfill #4}%
+}
 \newcommand{\datedline}[2]{%
   {\par #1 \hfill #2 \par}%
 }
