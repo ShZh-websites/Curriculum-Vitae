@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cv}
+\ProvidesClass{common}
 \LoadClass[11pt]{article}
 
 \RequirePackage{xltxtra}        % Some general improvements
