@@ -1,19 +1,34 @@
 LATEXMK_OPT = -quiet -file-line-error -halt-on-error -interaction=nonstopmode
-LATEXMK_OPT_PVC = $(LATEXMK_OPT) -pvc
-TRAGET = en-US.tex zh-CN.tex
+# LATEXMK_OPT_PVC = $(LATEXMK_OPT) -pvc # No need to enable realtime preview
+SRC = $(wildcard *.tex)
+DST = $(SRC:.tex=.pdf)
 
-en-US.pdf: en-US.tex common.cls
-	latexmk $(LATEXMK_OPT) $<
+en-US.pdf: $(SRC)
+	-@latexmk $(LATEXMK_OPT) $<
 
 zh-CN.pdf: zh-CN.tex common.cls
-	latexmk $(LATEXMK_OPT) $<
+	-@latexmk $(LATEXMK_OPT) $<
 
-.PHONY: all clean cleanall
+.PHONY: all view clean cleanall
 
-all: $(TRAGET)
+ifeq ($(OS),Windows_NT)
+  # on Windows
+  OPEN = start
+else
+  # on Unix/Linux
+  OPEN = open
+endif
+
+all: $(DST)
+
+view-zh: zh-CN.pdf
+	$(OPEN) $<
+
+view-en: en-US.pdf
+	$(OPEN) $<
 
 clean:
-	latexmk -c -silent $(TRAGET) 2> /dev/null
+	-@latexmk -c -silent $(SRC) 2> /dev/null
 
 cleanall:
-	latexmk -C -silent $(TRAGET) 2> /dev/null
+	-@latexmk -C -silent $(SRC) 2> /dev/null
