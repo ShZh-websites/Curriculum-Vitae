@@ -3,10 +3,10 @@ LATEXMK_OPT = -quiet -file-line-error -halt-on-error -interaction=nonstopmode
 SRC = $(wildcard *.tex)
 DST = $(SRC:.tex=.pdf)
 
-en-US.pdf: $(SRC)
+en-US.pdf: en-US.tex
 	-@latexmk $(LATEXMK_OPT) $<
 
-zh-CN.pdf: zh-CN.tex common.cls
+zh-CN.pdf: zh-CN.tex
 	-@latexmk $(LATEXMK_OPT) $<
 
 .PHONY: all view clean cleanall
