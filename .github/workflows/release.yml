@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       - name: Get date
         run: echo "::set-output name=date::$(date +'%Y/%m/%d')"
@@ -22,7 +22,7 @@ jobs:
           run: make all
 
       - name: Display build log
-        run: cat build/build-*.log
+        run: cat *.log
         if: ${{ failure() || success() }}
       
       - name: Release
