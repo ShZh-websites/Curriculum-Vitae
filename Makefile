@@ -21,7 +21,7 @@ endif
 
 all: $(DST)
 
-view-zh: zh-CN.pdf
+view-cn: zh-CN.pdf
 	$(OPEN) $<
 
 view-en: en-US.pdf
