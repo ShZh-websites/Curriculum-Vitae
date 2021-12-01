@@ -1,0 +1,35 @@
+name: Create release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+      
+      - name: Get date
+        run: echo "::set-output name=date::$(date +'%Y/%m/%d')"
+
+      - name: Build in TexLive env
+        uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: make all
+
+      - name: Display build log
+        run: cat build/build-*.log
+        if: ${{ failure() || success() }}
+      
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          name: ${{ steps.date.outputs.date }}
+          files: |
+            en-US.pdf
+            zh-CN.pdf
