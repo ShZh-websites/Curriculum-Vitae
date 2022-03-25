@@ -10,13 +10,15 @@
 \RequirePackage{XCharter}       % XCharter as serif-sans font
 \RequirePackage{titlesec}       % Set title style
 \RequirePackage{enumitem}       % Set list items
-\RequirePackage[super]{nth}
+\RequirePackage[super]{nth}     % Set ordinal
+\RequirePackage{fancyhdr}       % Set footer note
+\RequirePackage{xcolor}         % Set footer note's color
 \RequirePackage[
     a4paper,
 	left=0.8in,
 	right=0.8in,
-	top=0.70in,
-	bottom=0.55in,
+	top=0.55in,
+	bottom=0.6in,
 	nohead
 ]{geometry}
 
@@ -24,6 +26,10 @@
 \pagenumbering{gobble}          % suppress displaying page number
 \setlength{\parindent}{0pt}     % disable indent globally
 \hypersetup{hidelinks}
+% Page styles
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
 % List styles
 \setlist{noitemsep}            % removes spacing from items but leaves space around the whole list
 \setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
