@@ -18,7 +18,7 @@
 	left=0.8in,
 	right=0.8in,
 	top=0.55in,
-	bottom=0.6in,
+	bottom=0.7in,
 	nohead
 ]{geometry}
 
