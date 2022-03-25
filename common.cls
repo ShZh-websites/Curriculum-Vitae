@@ -97,3 +97,9 @@
 \newcommand{\datedline}[2]{
   {\par #1 \hfill #2 \par}
 }
+\newcommand{\award}[3]{
+    \datedline{#1}{#2} 
+    \vspace{0.5ex}
+    #3
+    \vspace{0.85ex}
+}
