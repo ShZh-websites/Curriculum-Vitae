@@ -10,6 +10,7 @@
 \RequirePackage{XCharter}       % XCharter as serif-sans font
 \RequirePackage{titlesec}       % Set title style
 \RequirePackage{enumitem}       % Set list items
+\RequirePackage[super]{nth}
 \RequirePackage[
     a4paper,
 	left=0.8in,
@@ -85,4 +86,8 @@
 \newcommand{\role}[2]{
     {\par \textit{#1} | #2 \par}
     \vspace{0.85ex}
+}
+% Define awards
+\newcommand{\datedline}[2]{
+  {\par #1 \hfill #2 \par}
 }
