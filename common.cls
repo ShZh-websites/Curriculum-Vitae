@@ -17,7 +17,7 @@
     a4paper,
 	left=0.8in,
 	right=0.8in,
-	top=0.55in,
+	top=0.75in,
 	bottom=0.7in,
 	nohead
 ]{geometry}
@@ -80,6 +80,11 @@
     \subsection[#1]{\textbf{#1}, #2 \hfill #3}
     \par #4 \hfill #5%
 }
+
+\newcommand{\educationsubsectionwithoutgpa}[5]{%
+    \subsection[#1]{\textbf{#1} \hfill #2}
+    \par #3 \hfill #4%
+}
     
 % Define my projects
 \newcommand{\projectsubsection}[4]{%
@@ -87,6 +92,13 @@
         {\href{#2}{\faGithub\ #1}} 
         \hspace{0.1em} \faStarO\ #3 
         \hfill #4}%
+}
+% Define my projects
+\newcommand{\projectsubsectionwithoutstar}[3]{%
+    \subsection[#1]{
+        {\href{#2}{\faGithub\ #1}} 
+        \hspace{0.1em}
+        \hfill #3}%
 }
 % Define role below my project
 \newcommand{\role}[2]{
